@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "MPA.Data.DbContext.Sqlite"
+		},
+		{
+			"path": "MPA.Data.EntityModels"
+		},
+		{
+			"path": "MPA.Test"
+		}
+	],
+	"settings": {}
+}
