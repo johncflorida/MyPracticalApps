@@ -23,10 +23,10 @@ public class OrderDetail
 
     [ForeignKey(nameof(OrderId))]
     [InverseProperty("OrderDetails")]
-    public Order? Order { get; set; } = null!;
+    public virtual Order? Order { get; set; } = null!;
 
     [ForeignKey(nameof(ProductId))]
     [InverseProperty("OrderDetails")]
-    public Product? Product { get; set; } = null!;
+    public virtual Product? Product { get; set; } = null!;
 
 }

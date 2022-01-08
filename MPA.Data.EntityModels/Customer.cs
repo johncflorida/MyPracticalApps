@@ -41,7 +41,7 @@ public class Customer
     public string? Fax { get; set; }
 
     [InverseProperty(nameof(Order.Customer))]
-    public ICollection<Order>? Orders { get; set; }
+    public virtual ICollection<Order>? Orders { get; set; }
 
 
 }
