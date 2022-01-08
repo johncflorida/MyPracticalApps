@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MPA.Data;
 
-public class Customer
+public class Supplier
 {
     [RegularExpression("[A-Z]{5}")]
-    public string CustomerId { get; set; } = null!;
+    public string SupplierId { get; set; } = null!;
     
-    [Required]
     [MaxLength(40)]
     public string CompanyName { get; set; } = null!;
     
@@ -40,8 +39,11 @@ public class Customer
     [MaxLength(24)]
     public string? Fax { get; set; }
 
-    [InverseProperty(nameof(Order.Customer))]
-    public ICollection<Order>? Orders { get; set; }
+    public string? HomePage { get; set; }
+
+    [InverseProperty(nameof(Product.Supplier))]
+    public virtual ICollection<Product>? Products { get; set; }
+
 
 
 }
