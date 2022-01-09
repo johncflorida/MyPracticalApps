@@ -11,7 +11,7 @@ public class Product
     [MaxLength(40)]
     public string ProductName { get; set; } = null!;
     
-    public string? SupplierId { get; set; }
+    public int? SupplierId { get; set; }
     
     public int? CategoryId { get; set; }
     

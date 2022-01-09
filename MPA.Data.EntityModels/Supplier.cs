@@ -6,8 +6,7 @@ namespace MPA.Data;
 
 public class Supplier
 {
-    [RegularExpression("[A-Z]{5}")]
-    public string SupplierId { get; set; } = null!;
+    public int SupplierId { get; set; }
     
     [MaxLength(40)]
     public string CompanyName { get; set; } = null!;
