@@ -7,7 +7,7 @@
 			"path": "MPA.Data.EntityModels"
 		},
 		{
-			"path": "MPA.Test"
+			"path": "MPA.Web"
 		}
 	],
 	"settings": {}

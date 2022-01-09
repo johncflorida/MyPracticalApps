@@ -1,0 +1,36 @@
+@page
+@using MPA.Pages
+@model supplierModel
+
+<h2 class="display-3">Suppliers List</h2>
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Company Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        @if (Model.Suppliers is not null)
+        {
+            foreach (var s in Model.Suppliers)
+            {
+            <tr>
+                <td>@s.Country</td>
+                <td>@s.CompanyName</td>
+            </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td>We are looking for new suppliers!!  Join our team below.</td>
+            </tr>
+
+        }
+        </tbody>
+    </table>
+</div>
+
+<a class="btn btn-primary" href="\">Back</a>
