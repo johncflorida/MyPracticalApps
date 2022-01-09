@@ -29,6 +29,7 @@ public class MPAContext : DbContext
     {
         modelBuilder.Entity<OrderDetail>(entity =>
         {
+            entity.HasKey(b => new { b.OrderId, b.ProductId });
             entity.ToTable("Order Detail");
             entity.HasOne(a => a.Order)
                 .WithMany(b => b.OrderDetails)
@@ -40,7 +41,7 @@ public class MPAContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull);
         });
 
-        modelBuilder.Entity<Territory>(entity =>
+        modelBuilder.Entity<EmployeeTerritory>(entity =>
         {
             entity.HasNoKey();
 

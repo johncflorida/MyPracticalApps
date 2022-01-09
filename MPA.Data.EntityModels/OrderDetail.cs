@@ -6,10 +6,8 @@ namespace MPA.Data;
 
 public class OrderDetail
 {
-    [Key]
     public int OrderId { get; set; }
     
-    [Key]
     public int ProductId { get; set; }
     
     [Required]
