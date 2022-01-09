@@ -1,0 +1,10 @@
+@page
+@using MPA.Data
+@inject MPAContext db
+@{
+    ViewData["Title"] = "MPA - Orders";
+}
+<div class="row">
+    <h1 class="display-3">Orders</h1>
+    <p>There are @db.Orders.Count() orders in the MPA database.</p>
+</div>

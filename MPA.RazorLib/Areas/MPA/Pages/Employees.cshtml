@@ -1,0 +1,24 @@
+﻿@page
+@using MPA.Data
+@model MPA.RazorLib.MPA.Pages.EmployeesPageModel
+
+<div class="row">
+    <h2 class="display-3">Employees</h2>
+    <div class="row">
+        @if (Model.Employees is not null)
+        {
+            foreach (Employee e in Model.Employees)
+            {
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">@e.LastName, @e.FirstName</div>
+                        <div class="card-body">
+                            <h5 class="card-title">@e.Country</h5>
+                            <p class="card-text">@e.Notes</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        </div>
+</div>

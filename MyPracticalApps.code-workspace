@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "MPA.Web"
+		},
+		{
+			"path": "MPA.RazorLib"
 		}
 	],
 	"settings": {}
