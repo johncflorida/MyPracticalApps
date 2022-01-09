@@ -31,6 +31,14 @@
         }
         </tbody>
     </table>
+    <p>Get added to our supplier's list.  Enter your details below.</p>
+    <form method="POST">
+        <label for="companyName">Company Name: </label>
+        <input id="companyName" asp-for="Supplier.CompanyName">
+        <label for="country">Country: </label>
+        <input id="country" asp-for="Supplier.Country">
+        <input type="submit" name="submit" id="submit">
+    </form>
 </div>
 
 <a class="btn btn-primary" href="\">Back</a>
